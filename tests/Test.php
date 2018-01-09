@@ -28,6 +28,8 @@ class Test extends TestCase
     public function testWrongBrackets() {
         $this->assertFalse($this->parser->parse("(((()()())(((())"));
         $this->assertFalse($this->parser->parse("(((("));
+        $this->assertFalse($this->parser->parse(")("));
+        $this->assertFalse($this->parser->parse("()()())(()()"));
         $this->assertFalse($this->parser->parse("))))"));
         $this->assertFalse($this->parser->parse("((((()())"));
         $this->assertFalse($this->parser->parse("(()()()()))((((()()()))(()()()(((()))))))"));
