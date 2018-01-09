@@ -30,6 +30,9 @@ class BracketParser implements BracketParserInterface
             $char = $line[$i];
             if($char === '(') $counter++;
             if($char === ')') $counter--;
+
+            if($counter < 0)
+                return false;
         }
 
         return $counter === 0;
