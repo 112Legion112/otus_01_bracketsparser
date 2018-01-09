@@ -18,11 +18,11 @@ class BracketParser implements BracketParserInterface
      *
      * @param string $line
      * @return bool
-     * @throws BracketException
+     * @throws \InvalidArgumentException
      */
     public function parse(string $line) : bool {
         if(preg_match('/[^()\s]/', $line)) {
-            throw new BracketException('Wrong symbol found');
+            throw new \InvalidArgumentException('Wrong symbol found');
         }
 
         $counter = 0;
