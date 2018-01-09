@@ -15,7 +15,7 @@
     },
     "autoload": {
       "psr-4": {
-          "Zapic\\": "src/"
+          "Zapic\\Brackets\\": "src/"
       }
     }
 }
