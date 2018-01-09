@@ -36,22 +36,22 @@ class Test extends TestCase
     }
 
     public function testThrowsWhenHasPlusSymbol() {
-        $this->expectException(BracketException::class);
+        $this->expectException(InvalidArgumentException::class);
         $this->parser->parse("(+)");
     }
 
     public function testThrowsWhenHasNumberSymbol() {
-        $this->expectException(BracketException::class);
+        $this->expectException(InvalidArgumentException::class);
         $this->parser->parse("(2)");
     }
 
     public function testThrowsWhenHasExpressionWithNumbers() {
-        $this->expectException(BracketException::class);
+        $this->expectException(InvalidArgumentException::class);
         $this->parser->parse("(2)+(3+4) + 1");
     }
 
     public function testThrowsWithNoBrackets() {
-        $this->expectException(BracketException::class);
+        $this->expectException(InvalidArgumentException::class);
         $this->parser->parse("{}");
     }
 }
