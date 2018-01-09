@@ -7,7 +7,7 @@
  */
 
 use PHPUnit\Framework\TestCase;
-use Zapic\Brackets\{BracketParser, BracketException};
+use Zapic\Brackets\BracketParser;
 
 class Test extends TestCase
 {
