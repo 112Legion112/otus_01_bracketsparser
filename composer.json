@@ -14,6 +14,8 @@
         "phpunit/phpunit": "^6"
     },
     "autoload": {
-      "classmap": ["src"]
+      "psr-4": {
+          "Zapic\\": "src/"
+      }
     }
 }
